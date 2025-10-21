@@ -35,12 +35,12 @@ class Pipe(pygame.Rect):
         self.passed = False
 
 #game images
-background_image = pygame.image.load("flappybirdbg.bmp")
-bird_image = pygame.image.load('flappybird.bmp')
+background_image = pygame.image.load("assets/flappybirdbg.bmp")
+bird_image = pygame.image.load('assets/flappybird.bmp')
 bird_image = pygame.transform.scale(bird_image, (bird_width, bird_height))
-top_pipe_image = pygame.image.load('toppipe.bmp')
+top_pipe_image = pygame.image.load('assets/toppipe.bmp')
 top_pipe_image = pygame.transform.scale(top_pipe_image, (pipe_width, pipe_height))
-bottom_pipe_image = pygame.image.load('bottompipe.bmp')
+bottom_pipe_image = pygame.image.load('assets/bottompipe.bmp')
 bottom_pipe_image = pygame.transform.scale(bottom_pipe_image, (pipe_width,pipe_height))
 
 #Game logic
@@ -66,8 +66,8 @@ def draw():
         window.blit(pipe.img, pipe)
 
     if start:
-        text_str = "Co-Op"
-        text_font = pygame.font.SysFont('Comic Sans MS', 45)
+        text_str = "Co-Op(Press Up or W to Start)"
+        text_font = pygame.font.SysFont('Comic Sans MS', 24)
         text_render = text_font.render(text_str, True, 'white')
         window.blit(text_render, (5, 0))
     else:
